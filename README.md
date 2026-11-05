@@ -2,7 +2,16 @@
 
 Restaurering og modernisering av en original Radionette-radio fra 1950–60-tallet, med originalt utseende og betjening, men internett-radio som lydkilde.
 
-> **Status:** Planlegging / prototype. Ingen elektronikkoblinger eller programvare er ennå verifisert på fysisk radio.
+> **Status:** Kjørbar benkprototype med simulert tuning og mpv-avspilling. Ikke verifisert på fysisk Pi/radio.
+
+## Kjør prototypen
+
+```sh
+python3 radio.py --dry-run
+python3 -m unittest discover -s tests -v
+```
+
+Se [installasjon, lokal lydtest og autostart](docs/PROTOTYPE.md). Python bruker standardbiblioteket; ekte lyd krever mpv. Eksempelkanalen er en lokal HTTP-testtone. GPIO og tuningstøy er videre arbeid.
 
 ## Mål
 
