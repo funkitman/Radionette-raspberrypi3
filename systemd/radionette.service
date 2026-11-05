@@ -1,0 +1,21 @@
+[Unit]
+Description=Radionette bench radio
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+DynamicUser=yes
+SupplementaryGroups=audio
+WorkingDirectory=/opt/radionette
+ExecStart=/usr/bin/python3 /opt/radionette/radio.py --config /etc/radionette/stations.json --headless
+Restart=on-failure
+RestartSec=5
+KillMode=control-group
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+
+[Install]
+WantedBy=multi-user.target

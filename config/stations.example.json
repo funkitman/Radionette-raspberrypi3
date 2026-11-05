@@ -1,0 +1,8 @@
+{
+  "bands": {
+    "FM": [{"name": "Local bench test", "url": "http://127.0.0.1:8000/tone.wav", "position": 0.25, "capture_width": 0.035}],
+    "AM": [],
+    "K": [],
+    "L": []
+  }
+}
